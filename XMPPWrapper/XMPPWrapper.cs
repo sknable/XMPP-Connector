@@ -37,10 +37,10 @@ namespace XMPPWrapper
             Thread qThread = new Thread(q.DoWork);
 
             qThread.Start();
-            q.AddQueue("cce-support");
-            q.AddQueue("ctc-support");
-            q.AddQueue("scp-support");
-            q.AddDirectQueue("dip-support");
+            q.AddQueue("A-support");
+            q.AddQueue("B-support");
+            q.AddQueue("C-support");
+            q.AddDirectQueue("D-support");
         }
 
         public void UpdatePresence(String queue, String message, Boolean available)
