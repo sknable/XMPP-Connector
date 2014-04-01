@@ -12,11 +12,11 @@ namespace XMPP_Connector
             Thread qThread = new Thread(q.DoWork);
 
             qThread.Start();
-            q.AddQueue("cce-support");
-            q.AddQueue("ctc-support");
-            q.AddQueue("scp-support");
-            q.AddDirectQueue("dip-support");
-            //qThread.Join();
+            q.AddQueue("A-support");
+            q.AddQueue("B-support");
+            q.AddQueue("C-support");
+            q.AddDirectQueue("D-support");
+
 
             Console.ReadLine();
 
