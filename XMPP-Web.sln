@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMPP-Web", "XMPP-Web\XMPP-Web.csproj", "{CF1E4941-BEEB-42F2-9B8C-3438565FD904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "agsXMPP", "agsxmpp\agsXMPP.csproj", "{91EA0D0B-D3BA-497F-AFEB-2CAD59DEBA0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatScript", "ChatScript\ChatScript.csproj", "{0EDA369C-08FB-4FC4-8F69-E0216CD71F3D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{07CC24DA-DEAC-4689-9D38-30D5AD7C78FE}"
+	ProjectSection(SolutionItems) = preProject
+		Chat.cs = Chat.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMPP-Connector", "XMPP-Connector\XMPP-Connector.csproj", "{D1F47C1D-F4F5-42F7-9C2D-7A214EDD93AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92B42F20-A633-4775-8CED-08356F2682B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WWB", "WWB", "{8E1387B7-2600-4695-9E18-F5DEAD503773}"
+	ProjectSection(SolutionItems) = preProject
+		WWB\agent.bas = WWB\agent.bas
+		WWB\AgentResponder.bas = WWB\AgentResponder.bas
+		WWB\XMPP.wwm = WWB\XMPP.wwm
+		WWB\XMPP.wwp = WWB\XMPP.wwp
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMPPWrapper", "XMPPWrapper\XMPPWrapper.csproj", "{84EDE784-EB0C-42FD-85B3-9517D3D10F19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TCL", "TCL", "{DFFC6E4F-C0E2-4ABE-8F32-2F6078C5B18F}"
+	ProjectSection(SolutionItems) = preProject
+		TCL\QueueMapper.tcl = TCL\QueueMapper.tcl
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF1E4941-BEEB-42F2-9B8C-3438565FD904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF1E4941-BEEB-42F2-9B8C-3438565FD904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF1E4941-BEEB-42F2-9B8C-3438565FD904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF1E4941-BEEB-42F2-9B8C-3438565FD904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EA0D0B-D3BA-497F-AFEB-2CAD59DEBA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EA0D0B-D3BA-497F-AFEB-2CAD59DEBA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EA0D0B-D3BA-497F-AFEB-2CAD59DEBA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EA0D0B-D3BA-497F-AFEB-2CAD59DEBA0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EDA369C-08FB-4FC4-8F69-E0216CD71F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EDA369C-08FB-4FC4-8F69-E0216CD71F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EDA369C-08FB-4FC4-8F69-E0216CD71F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EDA369C-08FB-4FC4-8F69-E0216CD71F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F47C1D-F4F5-42F7-9C2D-7A214EDD93AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F47C1D-F4F5-42F7-9C2D-7A214EDD93AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F47C1D-F4F5-42F7-9C2D-7A214EDD93AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F47C1D-F4F5-42F7-9C2D-7A214EDD93AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84EDE784-EB0C-42FD-85B3-9517D3D10F19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84EDE784-EB0C-42FD-85B3-9517D3D10F19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84EDE784-EB0C-42FD-85B3-9517D3D10F19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84EDE784-EB0C-42FD-85B3-9517D3D10F19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

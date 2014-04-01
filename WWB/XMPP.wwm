@@ -1,0 +1,104 @@
+﻿'//-------------------------------------------------------------------
+'// SFDC.wwm (WWB.NET SalesForce.com Demo)
+'//
+
+Imports System
+Imports XMPPWrapper
+
+Public Module SalesForceDotCOM
+
+    Dim xmpp As XMPPWrapper
+    Dim doNotIgnore As Boolean = False
+
+    Public Sub SetProcType()  Handles .SetProcType
+        SetProcessType("PP")
+    End Sub
+
+    Public Sub Initialize()  Handles .Initialize
+        xmpp = New XMPPWrapper()
+        xmpp.StartXMPP()
+        Trace("Started")
+
+
+    End Sub
+
+	Public Sub Terminate() Handles .Terminate
+        xmpp.Shutdown()
+	End Sub 
+
+	Public Sub HandleMessage(ByVal Msg As MessageType) Handles .HandleMessage
+
+	End Sub	
+
+    Public Sub ReceivedRequestAsDataSet(id as String, src as APISource, dataset as APIDataSet) Handles .ReceivedRequestAsDataSet
+
+        Trace("ReceivedRequestAsDataSet: received request as a dataset")
+
+        Trace("ReceivedRequestAsDataSet: Number of rows: " + CStr(dataset.GetRows))
+        Trace("ReceivedRequestAsDataSet: Number of columns: " + CStr(dataset.GetColumns))
+
+        Dim dest As Object
+        dest = CreateObject("vbaapi.APIDestination")
+        dest.SetDestinationFromSource(src)
+
+        Dim res As Object
+        res = CreateObject("vbaapi.APIResult")
+        res.Code = "SUCCEEDED"
+
+        Dim theResponseData As Object
+        theResponseData = CreateObject("vbaapi.APIDataSet")
+
+        'Always Send Success 
+        SendResponseAsDataSet(id, dest, res, theResponseData)
+
+        theResponseData = Nothing
+        res = Nothing
+        dest = Nothing
+
+        If (dataset.GetRows > 0) Then
+
+            Dim requestType As String = dataset.GetField(0, 0)
+            Dim jID As String = dataset.GetField(0, 1)
+            Dim agentName As String = dataset.GetField(0, 2)
+            Dim queue As String = dataset.GetField(0, 3)
+
+            Trace("Request Type:" + requestType)
+            Trace("JID:" + jID)
+            Trace("AgentName " + agentName)
+            Trace("queue " + queue)
+
+            If (requestType = "ContactJabber") Then
+                xmpp.CreateRequest(queue, jID, agentName + " has a follow up question, can you chat now?")
+            Else
+                Trace("ReceivedRequestAsDataSet: Invalid Type")
+            End If
+
+        End If
+
+    End Sub
+
+    Public Sub SysValChange(sysval as SysVal) Handles .SysValChange
+
+        If (sysVal.Name = "scp-closed") Then
+            Trace("scp-closed is: " + sysVal.Value)
+
+            If (doNotIgnore) Then
+                If (sysVal.Value = "0") Then
+                    xmpp.UpdatePresence("scp-support", "", True)
+                End If
+
+                If (sysVal.Value = "1") Then
+                    xmpp.UpdatePresence("scp-support", "Sorry We Are Closed.", False)
+                End If
+            End If
+
+            doNotIgnore = True
+
+        End If
+
+
+
+    End Sub
+
+
+End Module
