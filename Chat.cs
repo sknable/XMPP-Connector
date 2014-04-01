@@ -18,7 +18,7 @@ using System.Threading;
 
         public void OnChatInQueueUpdate(int numInQueue,ChatQueue queue)
         {
-            if(queue.Name == "ctc-support")
+            if(queue.Name == "A-support")
             {
                 if (numInQueue >= 1)
                 {
@@ -48,15 +48,12 @@ using System.Threading;
                 Thread.Sleep(700);
                 queue.SendChatMessageAsQueue("I'm sending an invite", from);
 
-                if (queue.Name.ToLower() == "ctc-support")
+                if (queue.Name.ToLower() == "A-support")
                 {
 
-                    String html = "<body xmlns='http://www.w3.org/1999/xhtml'><p>Some of these Links may help as you wait...</p><br/>" +
-                                "<p>Have You Seen: <a href=\"http://www.enghouseinteractive.com//products/computer-telephony-integration.php\">CTI Connect</a>?</p><br/>" +
-                                "<p>Have You Seen: <a href=\"http://www.enghouseinteractive.com//products/cti-for-crm.php\">CTI for CRM</a>?</p>" +
-                            "</body>";
+                    String html = "";
 
-                    queue.SendChatMessageAsQueue("http://www.enghouseinteractive.com//products/cti-for-crm.php", html, from);
+                    queue.SendChatMessageAsQueue("", html, from);
 
                 }
                 
