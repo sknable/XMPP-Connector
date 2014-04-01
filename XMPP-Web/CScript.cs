@@ -66,7 +66,7 @@ namespace XMPP_Web
             if (!_chatScriptEngine.LoadScriptFile(@"Chat.cs"))
             {
                 //For Demo
-                if (!_chatScriptEngine.LoadScriptFile(@"c:\Syntellect\site\XMPP\Chat.cs"))
+                if (!_chatScriptEngine.LoadScriptFile(@"c:\demo\site\XMPP\Chat.cs"))
                 {
                     Logger.WriteLine("Cant load Chat.cs");
                 }
