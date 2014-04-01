@@ -1,6 +1,6 @@
 PROJECT 10
 Attribute CompileId = "D392C8E0AACC4EB2B46B4DC8618DE18B"
-'#Reference #XMPPWrapper,Path=C:\Syntellect\site\XMPP\XMPPWrapper.dll
+'#Reference #XMPPWrapper,Path=C:\Demo\site\XMPP\XMPPWrapper.dll
 '#Language "WWB.NET"
 
 Project XMPP
