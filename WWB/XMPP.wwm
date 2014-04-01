@@ -1,7 +1,7 @@
 Imports System
 Imports XMPPWrapper
 
-Public Module SalesForceDotCOM
+Public Module XMPPDemo
 
     Dim xmpp As XMPPWrapper
     Dim doNotIgnore As Boolean = False
