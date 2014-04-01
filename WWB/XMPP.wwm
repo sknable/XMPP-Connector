@@ -1,7 +1,3 @@
-﻿'//-------------------------------------------------------------------
-'// SFDC.wwm (WWB.NET SalesForce.com Demo)
-'//
-
 Imports System
 Imports XMPPWrapper
 
